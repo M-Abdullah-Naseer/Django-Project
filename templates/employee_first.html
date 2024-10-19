@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Employee Signup</h1>
+<form action="add_emp" method="post">
+    <label>Employee Name: </label>
+    <input type="text" name="employee_name">
+    <input type="submit" value="Submit">
+</form>
+{% if emp %}
+    <p>{{ emp }}</p>
+{% endif %}
+
+<form action="all_employee_data" method="get">
+    <br>
+    <br>
+    <label>All Employee Name: </label>
+    <input type="submit" name="View_All_Employee_Data">
+
+</form>
+<br>
+<br>
+{% if all_emp_data %}
+    {% for employee in all_emp_data %}
+        <div>
+        <span>{{ employee.employee_name }}</span>
+        </div>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

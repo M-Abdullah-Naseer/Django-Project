@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello</h1>
+{% for i in C_data %}
+<form action="/all_SC_update2/{{ i.main_id }}" method="post">
+    <select name="std">
+        {% for z in Std_data %}
+            <option value="{{ z.student_id }}">{{ z.student_name }}</option>
+        {% endfor %}
+    </select>
+    <select name="class">
+        {% for j in class_data %}
+            <option value="{{ j.class_id }}">{{ j.class_name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Update">
+    <br>
+{% endfor %}
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
+</form>
+</body>
+</html>

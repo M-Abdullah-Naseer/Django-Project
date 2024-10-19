@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<h1>Hello</h1>
+<body>
+{% if all_emp_data %}
+    {% for i in all_emp_data %}
+        <form action="view_all_emp/{{ i.employee_id}}" method="post">
+            <input type="text" value="{{ i.employee_name}}" name="emp_name">
+            <input type="submit" value="update">
+        </form>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

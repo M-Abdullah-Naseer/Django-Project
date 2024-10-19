@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Signup Form</h1>
+
+<form action="signup" method="post">
+    <label>Username</label><br>
+    <input type="text" name="username">
+    <br>
+    <br>
+    <label>Email</label><br>
+    <input type="email" name="email">
+    <br>
+    <br>
+    <label>Password</label><br>
+    <input type="password" name="password">
+    <br>
+    <br>
+    <label>Confirm Password</label><br>
+    <input type="password" name="conf_pass"><br><br><br>
+    <input type="submit" value="Submit">
+
+</form>
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
+</body>
+</html>

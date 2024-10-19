@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Student Class</h1>
+<form action="add_SC" method="post">
+    <label>Students</label>
+{% csrf_token %}
+    <select name="std">
+        {% for i in student %}
+            <option value="{{ i.student_id }}">{{ i.student_name }}</option>
+        {% endfor %}
+    </select>
+    <label>Class</label>
+    <select name="class">
+        {% for i in class %}
+            <option value="{{ i.class_id }}">{{ i.class_name }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="add">
+</form>
+{% if message %}
+    <p>{{ message }}</p>
+{% endif %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Student subject</h1>
+<form method="post">
+    <label>Subject Name</label><br>
+    <input type="text" name="sub_name"><br>
+    <input type="submit" value="Submit">
+</form>
+{% if emp %}
+    <p>{{ emp }}</p>
+{% endif %}
+</body>
+</html>

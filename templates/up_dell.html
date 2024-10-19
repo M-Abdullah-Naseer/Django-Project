@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% if msg %}
+    {% for i in msg %}
+    <form action="/s_update/{{ i.subject_id }}" method="post">
+        <input type="text" name="s_name" value="{{ i.subject_name }}">
+        <input type="submit" value="update">
+    </form>
+
+    <form action="/s_delete/{{ i.subject_id }}" method="post">
+        <input type="submit" value="delete">
+    </form>
+    {% endfor %}
+
+{% endif %}
+</body>
+</html>

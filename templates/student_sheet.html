@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Student Register</h1>
+<form method="post">
+    <label>Name</label><br>
+    <input type="text" name="std_name"><br>
+    <label>gender</label><br>
+    <input type="text" name="std_gender"><br>
+    <input type="submit" value="Submit">
+</form>
+{% if emp %}
+    <p>{{ emp }}</p>
+{% endif %}
+</body>
+</html>

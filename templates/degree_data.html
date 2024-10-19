@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>State the name of your degree</h1>
+<form action="add_deg" method="post">
+    <label>degree Name: </label>
+    <input type="text" name="degree_name">
+        <input type="submit" value="Submit">
+</form>
+
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
+
+
+<form action="all_employee_deg" method="get">
+    <br>
+    <br>
+    <label>View all Employee's Degree: </label>
+    <input type="submit" name="View_All_Employee_Degrees">
+
+</form>
+<br>
+<br>
+{% if all_emp_deg_data %}
+    {% for employee in all_emp_deg_data %}
+        <div>
+        <span>{{ employee.degree_name }}</span>
+        </div>
+    {% endfor %}
+{% endif %}
+
+</body>
+</html>

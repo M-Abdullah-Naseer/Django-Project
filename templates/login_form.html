@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h1>Login Form</h1>
+
+<form action="login" method="post">
+    <label>Email</label><br>
+    <input type="email" name="email">
+    <br>
+    <br>
+    <label>Password</label><br>
+    <input type="password" name="password"><br><br><br>
+
+    <input type="submit" value="Submit">
+</form>
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
+</body>
+</html>
